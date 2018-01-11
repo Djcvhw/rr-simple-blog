@@ -1,0 +1,9 @@
+export const GET_POST_REQ = 'GET_POST_REQ';
+export const GET_POST_RES = 'GET_POST_RES';
+export const GET_POST_FAIL = 'GET_POST_FAIL';
+export const GET_POSTS_REQ = 'GET_POSTS_REQ';
+export const GET_POSTS_RES = 'GET_POSTS_RES';
+export const GET_POSTS_FAIL = 'GET_POSTS_FAIL';
+export const ADD_POST_REQ = 'ADD_POST_REQ';
+export const ADD_POST_RES = 'ADD_POST_RES';
+export const ADD_POST_FAIL = 'ADD_POST_FAIL';

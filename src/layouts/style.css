@@ -1,0 +1,16 @@
+.main-layout {
+  &__bar {
+    background-color: #242424;
+    &-title {
+      max-width: 750px;
+      margin: 0 auto;
+      color: #ffffff;
+      font-style: italic;
+      font-weight: normal;
+      padding: 5px;
+      &--bold {
+        font-weight: 600;
+      }
+    }
+  }
+}
