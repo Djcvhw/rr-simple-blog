@@ -16,7 +16,7 @@ export default ({
       parsedPosts.push(data);
       try {
         localStorage.setItem('posts', JSON.stringify(parsedPosts));
-        return parsedPosts;
+        return data;
       } catch (e) {
         if (e === 'QUOTA_EXCEEDED_ERR') {
           return {message: 'Превышен лимит localStorage!'}

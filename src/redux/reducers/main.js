@@ -28,9 +28,11 @@ export default (state = defaultState, action) => {
         posts: action.payload,
       };
     case ADD_POST_RES:
+      const posts = [].concat(state.posts);
+      posts.unshift(action.payload)
       return {
         ...state,
-        posts: action.payload,
+        posts,
       };
     case GET_POST_REQ:
     case GET_POST_FAIL:

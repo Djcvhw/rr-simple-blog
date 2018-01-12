@@ -15,10 +15,12 @@ class PostsContainer extends React.Component {
   }
   render() {
     const { posts } = this.props;
-    return <div>
-      <AddForm onSubmit={values => this.handleSubmit(values)}/>
-      <PostsFeed posts={posts} />
-    </div>
+    return [
+      <div className="main-layout__form-container" key={'AddForm'}>
+        <AddForm onSubmit={values => this.handleSubmit(values)}/>
+      </div>,
+      <PostsFeed posts={posts} key={'PostsFeed'}/>
+      ]
   }
 }
 

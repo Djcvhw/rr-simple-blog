@@ -1,7 +1,12 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { Form, Field, reduxForm } from 'redux-form'
-import compose from 'ramda/src/compose'
+import { Form, Field, reduxForm } from 'redux-form';
+import compose from 'ramda/src/compose';
+import CustomInput from './Form/CustomInput';
+import CustomTextarea from './Form/CustomTextarea';
+import './AddForm.css';
+
+const cn = require('bem-cn')('form-container');
 
 const validate = values => {
   const errors = {}
@@ -30,23 +35,27 @@ const connector = compose(
 class AddForm extends React.Component {
   render() {
     const { handleSubmit, pristine, submitting } = this.props;
-    return <div>
+    return <div className={`${cn}`}>
+      <h4 className={`${cn('title')}`}>Форма создания поста</h4>
       <Form onSubmit={handleSubmit}>
         <div>
           <div>
             <Field
               name="title"
-              component="input"
+              component={CustomInput}
               type="text"
               placeholder="Название поста"
             />
           </div>
           <div>
-            <Field name="body" component="textarea" placeholder="Содержание поста" />
+            <Field
+              name="body"
+              component={CustomTextarea}
+              placeholder="Содержание поста" />
           </div>
         </div>
         <div>
-          <button disabled={pristine || submitting}>
+          <button disabled={pristine || submitting} className="form-group__button">
             Создать пост
           </button>
         </div>

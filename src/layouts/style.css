@@ -1,16 +1,27 @@
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Meiryo UI';
+  font-size: 12px;
+}
 .main-layout {
+  padding-bottom: 40px;
   &__bar {
     background-color: #242424;
     &-title {
-      max-width: 750px;
+      max-width: 650px;
       margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
       color: #ffffff;
       font-style: italic;
       font-weight: normal;
-      padding: 5px;
+      font-size: 18px;
       &--bold {
         font-weight: 600;
       }
     }
+  }
+  &__form-container {
+    background-color: #e4e4e4;
   }
 }

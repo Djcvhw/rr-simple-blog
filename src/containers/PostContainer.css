@@ -1,0 +1,36 @@
+$color_light_gray: #f3f3f3;
+
+.post-container {
+  max-width: 600px;
+  margin: 40px auto;
+  border-bottom: 1px solid $color_light_gray;
+  font-size: 12px;
+  &__link {
+    display: inline-block;
+    width: 140px;
+    background-color: $color_light_gray;
+    color: #3f3f3f;
+    text-decoration: none;
+    vertical-align: middle;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    &-icon {
+      width: 34px;
+      height: 34px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+  }
+  &__post {
+    margin-top: 40px;
+  }
+  &__title {
+    font-size: 36px;
+  }
+  &__body {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
